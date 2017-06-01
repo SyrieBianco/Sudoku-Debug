@@ -1,11 +1,16 @@
 require_relative "tile"
+require "byebug"
 
 class Board
   def self.empty_grid
+
+#possible
     Array.new(9) do
       Array.new(9) { Tile.new(0) }
     end
   end
+
+##possible
 
   def self.from_file(filename)
     rows = File.readlines(filename).map(&:chomp)
@@ -35,6 +40,10 @@ class Board
   def columns
     rows.transpose
   end
+
+
+## possible
+
 
   def render
     puts "  #{(0..8).to_a.join(" ")}"
