@@ -40,6 +40,7 @@ class Board
     puts "  #{(0..8).to_a.join(" ")}"
     grid.each_with_index do |row, i|
       puts "#{i} #{row.join(" ")}"
+      asdf
     end
   end
 
